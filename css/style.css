@@ -1,0 +1,388 @@
+    /**** Importation des fonts ****/
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('images.css');
+    * {
+        font-family: "Montserrat", sans-serif;
+    
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    /**** header ****/
+    header {
+        position: fixed;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        top: 0;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        padding: 10px;
+        transition: 0.6s;
+        z-index: 10;
+    }
+
+    header img {
+        width: 100%;
+        max-width: 300px;
+        padding-left: 20px;
+    }
+
+    header nav {
+        display:flex;
+        gap: 40px;
+        margin: 0 50px 0 0;
+    }
+
+    header nav a {
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 600;
+        padding: 8px 30px;
+        border-radius: 20px;
+        transition: 0.3s;
+        color: #2b2b2e
+    }
+
+    header nav a:active {
+        background-color: #fed119 ;
+    }
+
+    header nav a:hover{
+        background-color: #fed119;
+    }
+
+    header nav:hover > a:no(:hover){
+        background:none;
+    }
+
+    /********** Sections **********/
+
+
+    /** tout le texte gregory edité **/
+
+    .container-infos-gre {
+        height: 120vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .container-infos-gre h1 {
+        width: 100%;
+        max-width: 500px;
+        z-index: -1;
+    }
+
+    .text-extermination-guepes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        color: #2b2b2e;
+        opacity: 0;
+    }
+
+    .text-extermination-guepes h2 {
+        position: absolute;
+        font-size: 70px;
+    }
+
+    .container-infos-gre.defilement-hidden .text-extermination-guepes {
+        opacity: 1;
+    }
+
+
+    .parallax-gregory-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2b2b2e;
+        z-index: -1;
+        opacity: 1;
+    }
+
+    .container-infos-gre.defilement .parallax-gregory-text {
+        opacity: 0;
+    }
+
+    .parallax-gregory-text h1 {
+        text-align: center;
+        letter-spacing: -2px;
+    }
+
+    /** changer la taille du texte**/
+    .gregory-text h1::first-line{
+        font-size: 120px;
+    }
+
+    .container-infos-gre {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        position:fixed;
+    }
+
+    .container-infos-gre h1{
+        font-size: 90px;
+    }
+
+    .container-infos-gre p {
+        width: 100%;
+        max-width: 600px;
+        font-size: 90px;
+        font-weight: 600;
+    }
+
+
+
+/**** image parallax ****/
+
+
+    .container-nit-guepes{
+        width: 100%;
+        height: 200vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+    }
+
+.nit-guepes {
+    position:absolute;
+    width: 800px;
+    padding: 900px 0 0 0 ;
+}
+
+
+.container-service-propose {
+    height: 250px;
+    padding: 200px 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+
+    background-image: radial-gradient(gray 1px, transparent 0);
+    background-size: 7px 7px;
+    background-position: -19px -19px;
+}
+
+.container-childs {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    background-color:white;
+    border-radius: 14px;
+    padding: 50px 100px;
+}
+
+.container-childs > article:nth-child(1){
+    background-color: #fed119;
+    border-radius: 14px;
+    padding: 10px 30px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.container-childs > article:nth-child(1) p {
+    padding: 12px 40px;
+    margin: 0 40px;
+}
+
+.container-childs > article:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 60px;
+    
+}
+
+.container-childs button {
+    width: 150px;
+    font-size: 10px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: white;
+    border: solid #2b2b2e;
+    border-radius: 18px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.container-childs button:hover {
+    transform: scale(1.1) rotate(-5deg);
+    background-color: #fed119;
+}
+
+/**** mouvement guêpes ****/
+
+.groupe-guepes {
+    width: 100%;
+    position: relative;
+    background-color: antiquewhite;
+    z-index: 1;
+}
+
+
+/**** Affectation guêpes tailles rotation ****/
+.Fichier1 {
+    width: 100%;
+    max-width: 200px;
+    transform: scalex(-1) rotate(-50deg);
+    position: absolute;
+    top: -200vh;
+    left: 200PX;
+}
+
+.Fichier2 {
+    width: 100%;
+    max-width: 350px;
+    transform:  rotate(-20deg);
+    position: absolute;
+    top: -240vh;
+    right: 400px;
+}
+
+.Fichier3 {
+    width: 100%;
+    max-width: 100px;
+    transform:  rotate(-20deg);
+    position: absolute;
+    top: -150vh;
+    right: 200px;
+}
+
+.Fichier4 {
+    width: 100%;
+    max-width: 200px;
+    transform:  rotate(-20deg);
+    position: sticky;
+    top: -50vh;
+    right: 70vh;
+    z-index: 2;
+}
+
+.Fichier5 {
+    width: 100%;
+    max-width: 200px;
+    transform: scalex(-1);
+    position: absolute;
+    top: -150vh;
+    left: 40vh;
+}
+
+/**** carte des travaux ****/
+
+.container-examples {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2b2e;
+}
+
+.avant-me-contacter {
+    margin: 0 90px;
+}
+
+.avant-me-contacter p:nth-child(1) {
+    margin: 40px 0 0 0;
+    color:#fed119;
+    font-size: 20px;
+}
+
+.avant-me-contacter p:nth-child(2) {
+    margin: 10px 0 90px 0 ;
+    color: white;
+    font-size: 90px;
+    font-weight: 600;
+}
+
+.avant-me-contacter p:nth-child(3) {
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.deux-examples {
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.child-example {
+    width: 100%;
+    max-width: 490px;
+    height: 290px;
+    display: flex;
+    gap: 20px;
+    background-color: #fed119;
+    margin: 150px 0 0 0;
+    padding: 50px;
+    border-radius: 30px;
+
+    transition: 0.5s ease;
+    -webkit-box-shadow: 10px 10px 6px -4px rgba(0,0,0,0.20); 
+    box-shadow: 10px 10px 6px -4px rgba(0,0,0,0.20);
+}
+
+.child-example:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #fed119;
+}
+
+.child-example2 {
+    width: 100%;
+    max-width: 490px;
+    height: 290px;
+    display: flex;
+    gap: 20px;
+    background-color: #fed119;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    border-radius: 30px;
+    transition: 0.5s ease;
+
+    -webkit-box-shadow: 10px 10px 6px -4px rgba(0,0,0,0.20); 
+    box-shadow: 10px 10px 6px -4px rgba(0,0,0,0.20);
+}
+
+.child-example2:hover {
+    transform: scale(1.1) rotate(-10deg);
+    background-color: #fed119;
+}
+
+.text-intervention {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-intervention p:nth-child(1){
+    font-size: 15px;
+}
+
+.text-intervention p:nth-child(2){
+    margin: 0;
+    font-size: 110px;
+    font-weight:500 ;
+}
+
+
+.textDansLaRegion p:nth-child(1) {
+    font-weight:800;
+    margin: 0 0 30px 0;
+}

@@ -1,0 +1,48 @@
+
+.block {
+    position: relative;
+    width: 580px;
+    height: 460px;
+    margin: 10px 300px 20px 80px;
+}
+
+.block-1 {
+    background: url(../assets/jpg/intervention1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-2 {
+    background: url(../assets/jpg/Combinaison2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-3 {
+    background: url(../assets/jpg/Combinaison.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-4 {
+    background: url(../assets/jpg/intervention1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.container h1 {
+    position: absolute;
+    font-size: 5rem;
+}
+
+.container {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.block-1 h1,
+.block-1 h2,
+.block-1 h3 {
+    bottom: 0;
+    right: -60px;
+}
+
+.block-4 h1 {
+    right: -60px;
+}
