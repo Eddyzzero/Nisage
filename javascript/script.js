@@ -42,17 +42,50 @@ window.addEventListener('scroll', () =>{
     }
 });
 
-let textCache = document.querySelector('.text-extermination-guepes');
-let faireDefilerHidden = 2;
+// let textCache = document.querySelector('.text-extermination-guepes');
+// let faireDefilerHidden = 200;
 
-window.addEventListener('scroll', () => {
-    if ( window.scrollY > faireDefilerHidden || window.scrollY < -faireDefilerHidden ) {
-    textCache.classList.remove('defilement-hidden');
+// window.addEventListener('scroll', () => {
+//     if ( window.scrollY > faireDefilerHidden || window.scrollY < -faireDefilerHidden ) {
+//     textCache.classList.remove('defilement-hidden');
+//     } else {
+//         textCache.classList.add('defilement-hidden');
+//     }
+// });
+
+// ajoute du deuxieme text pour le cacher lorsqu'on  defile la page
+window.addEventListener('scroll',hide);
+
+function hide (){
+    const hides = document.querySelectorAll('.text-extermination-guepes');
+
+    for(let i = 0; i < hides.length; i++) {
+        let hauteurFenetre = window.innerHeight;
+        let VoirHautFenetre = hides[i].getBoundingClientRect().top;
+        let pointVoir = 550;
+
+        //creer l'animation scroll
+        if ( VoirHautFenetre < hauteurFenetre -pointVoir){
+            hides[i].classList.add('active');
+        }
+        else{
+            hides[i].classList.remove('active');
+        }
+    }
+}
+
+let faireDefiler2 = 300;
+let quantiteDefilement2 = 0;
+
+window.addEventListener('scroll', () =>{
+    quantiteDefilement2 = window.scrollY;
+    let containerInfosGre = document.querySelector('.container-infos-gre');
+    if ( quantiteDefilement2 > faireDefiler2 ) {
+        containerInfosGre.classList.add('defilement');
     } else {
-        textCache.classList.add('defilement-hidden');
+        containerInfosGre.classList.remove('defilement');
     }
 });
-
 
 
  
