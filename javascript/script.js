@@ -41,51 +41,32 @@ window.addEventListener('scroll', () =>{
         containerInfosGre.classList.remove('defilement');
     }
 });
+ 
+//deuxiéme texte de defilement
 
-// let textCache = document.querySelector('.text-extermination-guepes');
-// let faireDefilerHidden = 200;
+//definir la quantité de scroll pour faire apparaitre le texte
+let scrollThreshold = 200;
 
-// window.addEventListener('scroll', () => {
-//     if ( window.scrollY > faireDefilerHidden || window.scrollY < -faireDefilerHidden ) {
-//     textCache.classList.remove('defilement-hidden');
-//     } else {
-//         textCache.classList.add('defilement-hidden');
-//     }
-// });
+// obtenir le texte caché
+let hiddenText = document.getElementById('hiddenText');
 
-// ajoute du deuxieme text pour le cacher lorsqu'on  defile la page
-window.addEventListener('scroll',hide);
-
-function hide (){
-    const hides = document.querySelectorAll('.text-extermination-guepes');
-
-    for(let i = 0; i < hides.length; i++) {
-        let hauteurFenetre = window.innerHeight;
-        let VoirHautFenetre = hides[i].getBoundingClientRect().top;
-        let pointVoir = 550;
-
-        //creer l'animation scroll
-        if ( VoirHautFenetre < hauteurFenetre -pointVoir){
-            hides[i].classList.add('active');
-        }
-        else{
-            hides[i].classList.remove('active');
-        }
-    }
-}
-
-let faireDefiler2 = 300;
-let quantiteDefilement2 = 0;
-
-window.addEventListener('scroll', () =>{
-    quantiteDefilement2 = window.scrollY;
-    let containerInfosGre = document.querySelector('.container-infos-gre');
-    if ( quantiteDefilement2 > faireDefiler2 ) {
-        containerInfosGre.classList.add('defilement');
+window.addEventListener('scroll', () => {
+    // verifier la position du scroll verical
+    if ( window.scrollY > scrollThreshold ) {
+        // si on fait un scroll plus grand que  200 montrer le texte caché
+        hiddenText.style.display = 'block';
     } else {
-        containerInfosGre.classList.remove('defilement');
+        // si le scroll est moins que 200, cacher le texte
+        hiddenText.style.display = 'none';
     }
 });
 
+// maintenant pour le faire dispaitre après certaine quantité des scrolls 
+let scrollThresholdhide = 600;
 
- 
+window.addEventListener('scroll', () => {
+    //verifier et cacher le texte après certain temps
+    if (window.screenY > scrollThresholdhide ) {
+        // si on fait un scroll plus grand que  800 montrer le texte caché
+    }
+})

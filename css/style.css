@@ -87,11 +87,10 @@
         align-items: center;
         z-index: -1;
         color: #2b2b2e;
-        opacity: 0;
+        display: none;
     }
 
     .text-extermination-guepes h2 {
-        position: absolute;
         font-size: 70px;
         text-transform: uppercase;
     }
