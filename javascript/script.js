@@ -45,14 +45,18 @@ window.addEventListener('scroll', () =>{
 //deuxiéme texte de defilement
 
 //definir la quantité de scroll pour faire apparaitre le texte
-let scrollThreshold = 200;
+let scrollShowThreshold = 200;
+let scrollHideThreshold = 1500;
+
 
 // obtenir le texte caché
 let hiddenText = document.getElementById('hiddenText');
 
 window.addEventListener('scroll', () => {
+
+    let scrollY = window.scrollY;
     // verifier la position du scroll verical
-    if ( window.scrollY > scrollThreshold ) {
+    if ( scrollY > scrollShowThreshold && scrollY < scrollHideThreshold ) {
         // si on fait un scroll plus grand que  200 montrer le texte caché
         hiddenText.style.display = 'block';
     } else {
@@ -61,12 +65,51 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// maintenant pour le faire dispaitre après certaine quantité des scrolls 
-let scrollThresholdhide = 600;
 
-window.addEventListener('scroll', () => {
-    //verifier et cacher le texte après certain temps
-    if (window.screenY > scrollThresholdhide ) {
-        // si on fait un scroll plus grand que  800 montrer le texte caché
-    }
-})
+
+
+const track = document.getElementById("image-track");
+
+const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+const handleOnUp = () => {
+  track.dataset.mouseDownAt = "0";  
+  track.dataset.prevPercentage = track.dataset.percentage;
+}
+
+const handleOnMove = e => {
+  if(track.dataset.mouseDownAt === "0") return;
+  
+  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 2;
+  
+  const percentage = (mouseDelta / maxDelta) * -100,
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+  
+  track.dataset.percentage = nextPercentage;
+  
+  track.animate({
+    transform: `translate(${nextPercentage}%, -50%)`
+  }, { duration: 1200, fill: "forwards" });
+  
+  for(const image of track.getElementsByClassName("image")) {
+    image.animate({
+      objectPosition: `${100 + nextPercentage}% center`
+    }, { duration: 1200, fill: "forwards" });
+  }
+}
+
+/* -- Had to add extra lines for touch events -- */
+
+window.onmousedown = e => handleOnDown(e);
+
+window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+window.onmouseup = e => handleOnUp(e);
+
+window.ontouchend = e => handleOnUp(e.touches[0]);
+
+window.onmousemove = e => handleOnMove(e);
+
+window.ontouchmove = e => handleOnMove(e.touches[0]);
