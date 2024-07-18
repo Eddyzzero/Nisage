@@ -46,7 +46,7 @@ window.addEventListener('scroll', () =>{
 
 //definir la quantité de scroll pour faire apparaitre le texte
 let scrollShowThreshold = 200;
-let scrollHideThreshold = 1500;
+let scrollHideThreshold = 1000;
 
 
 // obtenir le texte caché

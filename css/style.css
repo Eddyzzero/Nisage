@@ -295,11 +295,10 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
-    background-color: #2b2b2e;
 }
 
 .avant-me-contacter {
-    margin: 0 90px;
+    margin: 0 40vh;
 }
 
 .avant-me-contacter p:nth-child(1) {
@@ -310,7 +309,6 @@
 
 .avant-me-contacter p:nth-child(2) {
     margin: 10px 0 90px 0 ;
-    color: white;
     font-size: 90px;
     font-weight: 600;
 }
@@ -318,7 +316,6 @@
 .avant-me-contacter p:nth-child(3) {
     width: 100%;
     max-width: 400px;
-    color: white;
     font-size: 17px;
     font-weight: 300;
 }
@@ -393,3 +390,41 @@
     font-weight:800;
     margin: 0 0 30px 0;
 }
+
+.projects-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+footer {
+    background-color: #fed119;
+}
+
+.flex-row {
+    display: flex;
+    gap: 30rem;
+}
+
+.contact {
+    padding: 90px;
+    margin: 0 10rem;
+}
+
+.contact:nth-child(2) {
+    padding: 0;
+}
+
+.image-footer img {
+    width: 550px;
+    transform: translate(-10px, -150px);
+}
+
+
+
+
