@@ -407,13 +407,17 @@ footer {
 }
 
 .flex-row {
+    margin: 0 30rem;
     display: flex;
-    gap: 30rem;
+    gap: 20vh;
 }
 
 .contact {
-    padding: 90px;
-    margin: 0 10rem;
+    font-weight: 500;
+}
+
+.contact-horaires {
+    padding: 90px 0;
 }
 
 .contact:nth-child(2) {
@@ -423,6 +427,10 @@ footer {
 .image-footer img {
     width: 550px;
     transform: translate(-10px, -150px);
+}
+
+.bold {
+    font-weight: 700;
 }
 
 
