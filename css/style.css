@@ -34,7 +34,7 @@
     header img {
         width: 100%;
         max-width: 100px;
-        padding-left: 10px;
+        padding-left: 80px;
     }
 
     header nav {
@@ -177,6 +177,7 @@
     justify-content: left;
     align-items: center;
     position: relative;
+    color: #2b2b2e;
 
     background-image: radial-gradient(gray 1px, transparent 0);
     background-size: 7px 7px;
@@ -284,7 +285,7 @@
     max-width: 200px;
     transform: scalex(-1);
     position: absolute;
-    top: -150vh;
+    top: -250vh;
     left: 40vh;
 }
 
@@ -299,6 +300,7 @@
 
 .avant-me-contacter {
     margin: 0 40vh;
+    color: #2b2b2e;
 }
 
 .avant-me-contacter p:nth-child(1) {
@@ -309,14 +311,14 @@
 
 .avant-me-contacter p:nth-child(2) {
     margin: 10px 0 90px 0 ;
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 600;
 }
 
 .avant-me-contacter p:nth-child(3) {
     width: 100%;
     max-width: 400px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -325,6 +327,7 @@
     height: 300vh;
     display: flex;
     justify-content: space-evenly;
+    color: #2b2b2e;
 }
 
 .child-example {
@@ -404,6 +407,7 @@
 
 footer {
     background-color: #fed119;
+    color: #2b2b2e;
 }
 
 .flex-row {
@@ -417,8 +421,9 @@ footer {
 }
 
 .contact-horaires {
-    padding: 90px 0;
+    padding: 190px 0;
 }
+
 
 .contact:nth-child(2) {
     padding: 0;
@@ -431,8 +436,5 @@ footer {
 
 .bold {
     font-weight: 700;
+    text-transform: uppercase;
 }
-
-
-
-
