@@ -17,7 +17,7 @@
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
+    user-select: none;
   }
   
   #image-track > .image {
@@ -27,7 +27,6 @@
     object-position: 100% center;
   }
   
-  /* -- YouTube Link Styles -- */
   
   body.menu-toggled > .meta-link > span {
     color: rgb(30, 30, 30);

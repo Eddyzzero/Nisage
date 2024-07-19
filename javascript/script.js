@@ -67,6 +67,7 @@ window.addEventListener('scroll', () => {
 
 
 
+// ajoute d'une anitamtion pour la section projets
 
 const track = document.getElementById("image-track");
 
@@ -93,10 +94,10 @@ const handleOnMove = e => {
     transform: `translate(${nextPercentage}%, -50%)`
   }, { duration: 1200, fill: "forwards" });
   
-  for(const image of track.getElementsByClassName("image")) {
+  for(const image of track.querySelectorAll(".image")) {
     image.animate({
       objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
+    }, { duration: 1500, fill: "forwards" });
   }
 }
 
@@ -113,3 +114,24 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+// ajoute de l'animation scroll pour voir la page d'une façon plus fluide
+
+window.addEventListener ('scroll', reveal);
+
+function reveal () {
+    let revealsScroll = document.querySelectorAll('.reveal-scroll');
+
+    for ( i = 0; i < revealsScroll.length; i++ ) {
+        
+        let windowHeight = window.innerHeight;
+        let revealTop = revealsScroll[i].getBoundingClientRect().top;
+        let revalPoint = 150;
+
+        if ( revealTop < windowHeight - revalPoint ) {
+            revealsScroll[i].classList.add('active');
+        } else {
+            revealsScroll[i].classList.remove('active');
+        }
+    }
+}
