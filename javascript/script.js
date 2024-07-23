@@ -135,3 +135,13 @@ function reveal () {
         }
     }
 }
+
+
+// burger menu interaction 
+const hamMenu = document.querySelector('.ham-menu');
+const offScreentMenu = document.querySelector('.off-screen-menu');
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreentMenu.classList.toggle('active');
+})

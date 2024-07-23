@@ -1,6 +1,7 @@
     /**** Importation des fonts ****/
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     @import url('images.css');
+    @import url('responsive.css');
     * {
         font-family: "Montserrat", sans-serif;
     
@@ -44,7 +45,6 @@
     header nav {
         display:flex;
         gap: 60px;
-        margin: 0 50px 0 0;
     }
 
     header nav a {
@@ -454,4 +454,147 @@ footer {
 .reveal-scroll.active {
     transform: translateY(0px);
     opacity: 1;
+}
+
+/*  responsive */
+
+/* burger menu */
+@media screen and (max-width:847px) {
+
+    header {
+        background-color: transparent ;
+        /* backdrop-filter: blur(10px);
+        background-image: linear-gradient(
+            120deg,
+            rgba(225, 196, 6, 0.3),
+            rgba(15, 5, 19,0.2) */
+    }
+
+.off-screen-menu {
+    background-color:#2b2b2e;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu a {
+    color: #fed119;
+}
+
+.off-screen-menu a:hover {
+    color:aliceblue;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.nav {
+    padding: 1rem;
+    display: flex;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color:#fed119;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+/* creation de la rotation du burger menu en cliquant */
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform:  translate(-50%, -50%) rotate(-45deg);
+}
+
+.avant-me-contacter {
+    margin: 0 5vh;
+}
+
+.avant-me-contacter p:nth-child(2) {
+    font-size: 90px;
+}
+
+.deux-examples {
+    display: grid;
+    row-gap: 10em;
+}
+
+.container-service-propose {
+    margin-top: 500px;
+}
+.container-childs > article:nth-child(1) {
+    font-size: 30px;
+}
+
+.container-childs {
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+
+.container-childs > article:nth-child(2) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 0;
+}
+
+#image-track {
+    font-size: 4rem;
+    left: 30%;
+}
+
+.projects-text {
+    font-size: 4rem;
+}
+
+.flex-row {
+    padding: 2rem 0;
+    margin: 0 2rem;
+    gap: 4vh;
+}
+
+.image-footer img {
+    transform: translate(-10px, 150px);
+}
 }
