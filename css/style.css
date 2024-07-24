@@ -556,11 +556,11 @@ footer {
 
 .deux-examples {
     display: grid;
-    row-gap: 10em;
+    row-gap: 12em;
 }
 
 .container-service-propose {
-    margin-top: 500px;
+    margin-top: 570px;
 }
 .container-childs > article:nth-child(1) {
     font-size: 30px;
@@ -595,6 +595,174 @@ footer {
 }
 
 .image-footer img {
-    transform: translate(-10px, 150px);
+    transform: translate(-10px, -140px);
 }
+
+.container-infos-gre h1 {
+    font-size: 70px;
+}
+
+.text-extermination-guepes h2 {
+    font-size: 50px;
+}
+
+.nit-guepes {
+    width: 600px;
+}
+
+.Fichier2 {
+    width: 100%;
+    max-width: 350px;
+    transform: rotate(-20deg);
+    position: absolute;
+    top: -360vh;
+    right: 50px;
+}
+
+.container {
+    height: 50vh;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+    .Fichier2 {
+        width: 100%;
+        max-width: 220px;
+        transform: rotate(-20deg);
+        position: absolute;
+        top: -360vh;
+        right: 50px;
+    }
+
+    .nit-guepes {
+        padding: 970px 0 0 0;
+    }
+
+    .Fichier5 {
+        width: 100%;
+        max-width: 200px;
+        transform: scalex(-1);
+        position: absolute;
+        top: -250vh;
+        left: 3vh;
+    }
+
+    .Fichier1 {
+        width: 100%;
+        max-width: 200px;
+        transform: rotate(-52deg);
+        position: absolute;
+        top: -200vh;
+        left: 200PX;
+    }
+
+    .avant-me-contacter p:nth-child(2) {
+        font-size: 62px;
+    }
+
+    .Fichier3 {
+        right: 38px;
+    } 
+
+    .deux-examples {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .child-example,
+    .child-example2 {
+        width: 360px;
+        height: 390px;
+        flex-direction: column;
+    }
+
+    .text-intervention p:nth-child(2) {
+        font-weight: 90px;
+    }
+
+    .container-service-propose {
+        margin-top: 660px;
+    }
+
+    .container-childs {
+        width: 300px;
+    }
+
+    .container-childs > article:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .Fichier4 {
+        max-width: 100px;
+    }
+
+    .image-footer img {
+        width: 460px;
+        transform: translate(-93px, -187px);
+    }
+
+    .contact div img {
+        width: 138px;
+    }
+
+    .contact-horaires {
+        padding: 113px 0;
+    }
+}
+
+@media (min-width: 848px) and ( max-width:1500px) {
+
+    .Fichier5 {
+        width: 100%;
+        max-width: 200px;
+        transform: scalex(-1);
+        position: absolute;
+        top: -250vh;
+        left: 0vh;
+    }
+
+    .Fichier2 {
+        width: 100%;
+        max-width: 250px;
+        transform: rotate(-20deg);
+        position: absolute;
+        top: -240vh;
+        right: 13px;
+    }
+
+    .avant-me-contacter {
+        margin: 0 4vh;
+    }
+
+    .deux-examples {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20vh;
+    }
+
+    .container-examples {
+        height: 140vh;
+    }
+
+    .container {
+        height: 70vh;
+    }
+
+    .flex-row {
+        margin: 0 1rem;
+        gap: 9vh;
+    }
+
+    .Fichier1 {
+        width: 100%;
+        max-width: 200px;
+        transform: rotate(-50deg);
+        position: absolute;
+        top: -200vh;
+        left: 1031PX;
+    }
 }
